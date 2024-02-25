@@ -6,7 +6,6 @@ metadata:
     app.kubernetes.io/part-of: argocd
   name: argocd-rbac-cm
   namespace: argocd
-  
 data:
   policy.qa.csv: |
     p, role:qa, applications, get, team-project/qa-apps, allow
