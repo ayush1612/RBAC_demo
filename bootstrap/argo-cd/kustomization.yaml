@@ -10,6 +10,14 @@ configMapGenerator:
       usernameSecret:
         key: git_username
         name: autopilot-secret
+      accounts.userA1: apiKey, login
+    accounts.userA2: apiKey, login
+    accounts.userA3: apiKey, login
+    accounts.userB1: apiKey, login
+    accounts.userB2: apiKey, login
+    accounts.userC1: apiKey, login
+    accounts.userC2: apiKey, login
+    accounts.userD1: apiKey, login
   name: argocd-cm
 kind: Kustomization
 namespace: argocd
