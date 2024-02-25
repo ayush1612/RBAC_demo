@@ -17,11 +17,14 @@ data:
   accounts.userC1: apiKey, login
   accounts.userC2: apiKey, login
   accounts.userD1: apiKey, login
-
 kind: ConfigMap
 metadata:
+  creationTimestamp: "2024-02-25T05:26:51Z"
   labels:
+    app.kubernetes.io/instance: argo-cd
     app.kubernetes.io/name: argocd-cm
     app.kubernetes.io/part-of: argocd
   name: argocd-cm
   namespace: argocd
+  resourceVersion: "21406"
+  uid: 69761b0d-6890-4e56-ab49-55836b5c60ff
