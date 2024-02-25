@@ -15,6 +15,6 @@ data:
 
     p, role:qa, applications, get, team-project/dev-apps, allow
     p, role:qa, applications, sync, team-project/dev-apps, allow
-    p, role:qa, applications, delete, team-project/dev-apps, allow
+    p, role:qa, applications, delete, team-project/dev-apps, deny
 
     g, qa, role:qa
