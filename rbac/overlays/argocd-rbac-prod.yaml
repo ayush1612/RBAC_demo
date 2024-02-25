@@ -10,7 +10,7 @@ metadata:
     app.kubernetes.io/part-of: argocd
   name: argocd-rbac-cm
   namespace: argocd
-  
+
 data:
   policy.prod.csv: |
     p, role:prod, applications, *, */*, allow
