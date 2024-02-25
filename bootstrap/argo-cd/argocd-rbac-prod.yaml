@@ -11,9 +11,9 @@ data:
   policy.prod.csv: |
     p, role:prod, applications, get, team-project/prod-apps, allow
     p, role:prod, applications, sync, team-project/prod-apps, allow
-    p, role:prod, applications, delete, team-project/prod-apps, deny
 
     p, role:prod, applications, get, team-project/qa-apps, allow
+    
     p, role:prod, applications, sync, team-project/qa-apps, allow
 
     g, prod, role:prod
