@@ -30,9 +30,9 @@ metadata:
   name: dev-apps
   namespace: argocd
 spec:
-  project: default
+  project: team-project
   source:
-    repoURL: https://github.com/ayush1612/RBAC_demo_manifets.git
+    repoURL: https://github.com/ayush1612/RBAC_demo_manifests.git
     targetRevision: HEAD
     path: dev/kustomize
   destination:
@@ -45,9 +45,9 @@ metadata:
   name: qa-apps
   namespace: argocd
 spec:
-  project: default
+  project: team-project
   source:
-    repoURL: https://github.com/ayush1612/RBAC_demo_manifets.git
+    repoURL: https://github.com/ayush1612/RBAC_demo_manifests.git
     targetRevision: HEAD
     path: qa/kustomize
   destination:
@@ -60,9 +60,9 @@ metadata:
   name: prod-apps
   namespace: argocd
 spec:
-  project: default
+  project: team-project
   source:
-    repoURL: https://github.com/ayush1612/RBAC_demo_manifets.git
+    repoURL: https://github.com/ayush1612/RBAC_demo_manifests.git
     targetRevision: HEAD
     path: prod/kustomize
   destination:
