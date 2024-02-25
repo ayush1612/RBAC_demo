@@ -10,7 +10,6 @@ metadata:
 data:
   policy.prod.csv: |
     p, role:prod, applications, get, team-project/prod-apps, allow
-    p, role:prod, applications, sync, team-project/prod-apps, allow
 
     p, role:prod, applications, get, team-project/qa-apps, allow
     
