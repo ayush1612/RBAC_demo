@@ -34,7 +34,7 @@ spec:
   source:
     repoURL: https://github.com/ayush1612/RBAC_demo_manifests.git
     targetRevision: HEAD
-    path: dev\kustomize
+    path: dev/kustomize
   destination:
     server: https://kubernetes.default.svc
     namespace: dev
@@ -49,7 +49,7 @@ spec:
   source:
     repoURL: https://github.com/ayush1612/RBAC_demo_manifests.git
     targetRevision: HEAD
-    path: qa\kustomize
+    path: qa/kustomize
   destination:
     server: https://kubernetes.default.svc
     namespace: qa
@@ -64,7 +64,7 @@ spec:
   source:
     repoURL: https://github.com/ayush1612/RBAC_demo_manifests.git
     targetRevision: HEAD
-    path: prod\kustomize
+    path: prod/kustomize
   destination:
     server: https://kubernetes.default.svc
     namespace: prod
