@@ -18,7 +18,7 @@ spec:
     kind: Application
   project: default
   source:
-    path: bootstrap\argo-cd
+    path: bootstrap/argo-cd
     repoURL: https://github.com/ayush1612/RBAC_demo.git
   syncPolicy:
     automated:
