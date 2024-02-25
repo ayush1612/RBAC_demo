@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: team-project
+  namespace: argocd
+  # Finalizer that ensures that project is not deleted until it is not referenced by any application
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  description: Team Project to demonstrate RBAC
+  # Allow manifests to deploy from any Git repos
+  sourceRepos:
+  - 'https://github.com/ayush1612/RBAC_demo_manifests'
+  # Only permit applications to deploy to the guestbook namespace in the same cluster
+  destinations:
+  - namespace: dev
+    server: https://kubernetes.default.svc
+
+  - namespace: qa
+    server: https://kubernetes.default.svc
+
+  - namespace: prod
+    server: https://kubernetes.default.svc

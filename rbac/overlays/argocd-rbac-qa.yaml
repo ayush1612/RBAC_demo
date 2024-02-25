@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"ConfigMap","metadata":{"annotations":{},"labels":{"app.kubernetes.io/name":"argocd-rbac-cm","app.kubernetes.io/part-of":"argocd"},"name":"argocd-rbac-cm","namespace":"argocd"}}
+  creationTimestamp: "2024-02-25T07:29:42Z"
+  labels:
+    app.kubernetes.io/name: argocd-rbac-cm
+    app.kubernetes.io/part-of: argocd
+  name: argocd-rbac-cm
+  namespace: argocd
+  uid: 0f445a2d-c6ee-4fb7-901c-3f76de7d054b
+data:
+  policy.qa.csv: |
+    p, role:qa, applications, *, */*, allow
+    p, role:qa, clusters, get, *, allow
+    p, role:qa, repositories, get, *, allow
+    p, role:qa, repositories, create, *, allow
+    p, role:qa, repositories, update, *, allow
+    p, role:qa, repositories, delete, *, allow
+    g, qa, role:qa
