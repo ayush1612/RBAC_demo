@@ -30,7 +30,7 @@ metadata:
   name: dev-apps
   namespace: argocd
 spec:
-  project: team-project
+  project: default
   source:
     repoURL: https://github.com/ayush1612/RBAC_demo_manifets.git
     targetRevision: HEAD
@@ -45,7 +45,7 @@ metadata:
   name: qa-apps
   namespace: argocd
 spec:
-  project: team-project
+  project: default
   source:
     repoURL: https://github.com/ayush1612/RBAC_demo_manifets.git
     targetRevision: HEAD
@@ -60,7 +60,7 @@ metadata:
   name: prod-apps
   namespace: argocd
 spec:
-  project: team-project
+  project: default
   source:
     repoURL: https://github.com/ayush1612/RBAC_demo_manifets.git
     targetRevision: HEAD
