@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/part-of: argocd
   name: argocd-rbac-cm
   namespace: argocd
-  uid: 9cf39f53-f019-464b-a6d5-71515ea18ce2
+
 
 data:
   policy.dev.csv: |
