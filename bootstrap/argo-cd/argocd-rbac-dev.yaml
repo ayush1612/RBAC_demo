@@ -9,12 +9,12 @@ metadata:
 
 
 data:
+    # p, role:dev, applications, get, team-project/prod-apps, allow
   policy.dev.csv: |
     p, role:dev, applications, get, team-project/dev-apps, allow
     p, role:dev, applications, sync, team-project/dev-apps, allow
     p, role:dev, applications, delete, team-project/dev-apps, deny
 
     p, role:dev, applications, get, team-project/qa-apps, allow
-    p, role:dev, applications, get, team-project/prod-apps, allow
 
     g, dev, role:dev
