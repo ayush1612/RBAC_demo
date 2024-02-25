@@ -1,13 +1,13 @@
 apiVersion: v1
 data:
-  repository.credentials: |
-    - passwordSecret:
-        key: git_token
-        name: autopilot-secret
-      url: https://github.com/
-      usernameSecret:
-        key: git_username
-        name: autopilot-secret
+  # repository.credentials: |
+  #   - passwordSecret:
+  #       key: git_token
+  #       name: autopilot-secret
+  #     url: https://github.com/
+  #     usernameSecret:
+  #       key: git_username
+  #       name: autopilot-secret
   timeout.reconciliation: 15s
   accounts.userA1: apiKey, login
   accounts.userA2: apiKey, login
