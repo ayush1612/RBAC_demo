@@ -1,24 +1,24 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
-configMapGenerator:
-- behavior: merge
-  literals:
-  - |
-    repository.credentials=- passwordSecret:
-        key: git_token
-        name: autopilot-secret
-      url: https://github.com/
-      usernameSecret:
-        key: git_username
-        name: autopilot-secret
-      accounts.userA1: apiKey, login
-    accounts.userA2: apiKey, login
-    accounts.userA3: apiKey, login
-    accounts.userB1: apiKey, login
-    accounts.userB2: apiKey, login
-    accounts.userC1: apiKey, login
-    accounts.userC2: apiKey, login
-    accounts.userD1: apiKey, login
-  name: argocd-cm
+# configMapGenerator:
+# - behavior: merge
+#   literals:
+#   - |
+#     repository.credentials=- passwordSecret:
+#         key: git_token
+#         name: autopilot-secret
+#       url: https://github.com/
+#       usernameSecret:
+#         key: git_username
+#         name: autopilot-secret
+#       accounts.userA1: apiKey, login
+#     accounts.userA2: apiKey, login
+#     accounts.userA3: apiKey, login
+#     accounts.userB1: apiKey, login
+#     accounts.userB2: apiKey, login
+#     accounts.userC1: apiKey, login
+#     accounts.userC2: apiKey, login
+#     accounts.userD1: apiKey, login
+#   name: argocd-cm
 kind: Kustomization
 namespace: argocd
 resources:
