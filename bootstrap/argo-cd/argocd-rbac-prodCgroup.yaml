@@ -8,13 +8,9 @@ metadata:
   namespace: argocd
 
 data:
-  policy.prod.csv: |
-    p, role:prod, applications, get, team-project/prod-apps, allow
+  policy.product-c.csv: |
+    p, role:prodCgroup, applications, get, product-c-project/product-c-apps, allow
+    p, role:prodCgroup, applications, sync, product-c-project/product-c-apps, allow
+    p, role:prodCgroup, applications, delete, product-c-project/product-c-apps, deny
 
-    p, role:prod, applications, get, team-project/qa-apps, allow
-    
-    p, role:prod, applications, get, team-project/dev-apps, allow
-    p, role:prod, applications, sync, team-project/dev-apps, allow
-    p, role:prod, applications, delete, team-project/dev-apps, allow
-
-    g, prod, role:prod
+    g, prodCgroup, role:prodCgroup
