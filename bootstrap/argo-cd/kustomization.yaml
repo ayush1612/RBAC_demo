@@ -5,9 +5,9 @@ metadata:
   name: arbitrary
 resources:
 - argocd-rbac-cm-common.yaml
+- argocd-cm.yaml
 namespace: argocd
 patchesStrategicMerge:
-- argocd-cm.yaml
 - argocd-rbac-prodAgroup.yaml
 - argocd-rbac-prodBgroup.yaml
 - argocd-rbac-prodCgroup.yaml
