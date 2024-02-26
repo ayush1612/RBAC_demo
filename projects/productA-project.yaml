@@ -24,7 +24,7 @@ metadata:
   name: product-a-apps
   namespace: argocd
 spec:
-  project: productA-project
+  project: product-a-project
   source:
     repoURL: https://github.com/ayush1612/RBAC_demo_manifests.git
     targetRevision: HEAD
