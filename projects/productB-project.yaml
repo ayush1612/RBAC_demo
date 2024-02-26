@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: team-project
+  name: productB-project
   namespace: argocd
   # Finalizer that ensures that project is not deleted until it is not referenced by any application
   finalizers:
@@ -14,57 +14,21 @@ spec:
   - 'https://github.com/ayush1612/RBAC_demo'
   # Only permit applications to deploy to the guestbook namespace in the same cluster
   destinations:
-  - namespace: dev
-    server: https://kubernetes.default.svc
-
   - namespace: qa
     server: https://kubernetes.default.svc
 
-  - namespace: prod
-    server: https://kubernetes.default.svc
-
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dev-apps
+  name: productB-apps
   namespace: argocd
 spec:
-  project: team-project
+  project: productB-project
   source:
     repoURL: https://github.com/ayush1612/RBAC_demo_manifests.git
     targetRevision: HEAD
-    path: dev/kustomize
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: dev
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: qa-apps
-  namespace: argocd
-spec:
-  project: team-project
-  source:
-    repoURL: https://github.com/ayush1612/RBAC_demo_manifests.git
-    targetRevision: HEAD
-    path: qa/kustomize
+    path: productB/kustomize
   destination:
     server: https://kubernetes.default.svc
     namespace: qa
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: prod-apps
-  namespace: argocd
-spec:
-  project: team-project
-  source:
-    repoURL: https://github.com/ayush1612/RBAC_demo_manifests.git
-    targetRevision: HEAD
-    path: prod/kustomize
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: prod

@@ -7,6 +7,6 @@ resources:
 - argocd-rbac-cm-common.yaml
 namespace: argocd
 patchesStrategicMerge:
-- argocd-rbac-dev.yaml
-- argocd-rbac-qa.yaml
-- argocd-rbac-prod.yaml
+- argocd-rbac-prodAgroup.yaml
+- argocd-rbac-prodBgroup.yaml
+- argocd-rbac-prodCgroup.yaml
