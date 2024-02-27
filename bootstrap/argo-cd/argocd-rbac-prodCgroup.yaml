@@ -17,12 +17,13 @@ data:
     p, role:prodCdev, applications, sync, product-c-project/product-c-qa, deny
     p, role:prodCdev, applications, delete, product-c-project/product-c-qa, deny
 
-
     p, role:prodCdev, applications, get, product-c-project/product-c-prod, allow
     p, role:prodCdev, applications, sync, product-c-project/product-c-prod, deny
     p, role:prodCdev, applications, delete, product-c-project/product-c-prod, deny
 
     g, prodCdev, role:prodCdev
+
+
 
 
     p, role:prodCqa, applications, get, product-c-project/product-c-qa, allow
@@ -33,12 +34,13 @@ data:
     p, role:prodCqa, applications, sync, product-c-project/product-c-dev, deny
     p, role:prodCqa, applications, delete, product-c-project/product-c-dev, deny
 
-
     p, role:prodCqa, applications, get, product-c-project/product-c-prod, allow
     p, role:prodCqa, applications, sync, product-c-project/product-c-prod, deny
     p, role:prodCqa, applications, delete, product-c-project/product-c-prod, deny
 
     g, prodCqa, role:prodCqa
+
+
 
 
     p, role:prodCprod, applications, get, product-c-project/product-c-prod, allow
@@ -48,7 +50,6 @@ data:
     p, role:prodCprod, applications, get, product-c-project/product-c-qa, allow
     p, role:prodCprod, applications, sync, product-c-project/product-c-qa, deny
     p, role:prodCprod, applications, delete, product-c-project/product-c-qa, deny
-
 
     p, role:prodCprod, applications, get, product-c-project/product-c-dev, allow
     p, role:prodCprod, applications, sync, product-c-project/product-c-dev, deny
