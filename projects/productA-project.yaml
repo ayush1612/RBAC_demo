@@ -35,7 +35,7 @@ spec:
     path: productA/kustomize
   destination:
     server: https://kubernetes.default.svc
-    namespace: produt-a-dev
+    namespace: product-a-dev
 
 ---
 apiVersion: argoproj.io/v1alpha1
@@ -51,7 +51,7 @@ spec:
     path: productA/kustomize
   destination:
     server: https://kubernetes.default.svc
-    namespace: produt-a-qa
+    namespace: product-a-qa
 
 ---
 apiVersion: argoproj.io/v1alpha1
@@ -67,4 +67,4 @@ spec:
     path: productA/kustomize
   destination:
     server: https://kubernetes.default.svc
-    namespace: produt-a-prod
+    namespace: product-a-prod
