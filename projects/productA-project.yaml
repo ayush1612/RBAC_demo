@@ -14,14 +14,18 @@ spec:
   - 'https://github.com/ayush1612/RBAC_demo'
   # Only permit applications to deploy to the guestbook namespace in the same cluster
   destinations:
-  - namespace: dev
+  - namespace: product-a-dev
+    server: https://kubernetes.default.svc
+  - namespace: product-a-qa
+    server: https://kubernetes.default.svc
+  - namespace: product-a-prod
     server: https://kubernetes.default.svc
 
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: product-a-apps
+  name: product-a-dev
   namespace: argocd
 spec:
   project: product-a-project
@@ -31,4 +35,36 @@ spec:
     path: productA/kustomize
   destination:
     server: https://kubernetes.default.svc
-    namespace: dev
+    namespace: produt-a-dev
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: product-a-qa
+  namespace: argocd
+spec:
+  project: product-a-project
+  source:
+    repoURL: https://github.com/ayush1612/RBAC_demo_manifests.git
+    targetRevision: HEAD
+    path: productA/kustomize
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: produt-a-qa
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: product-a-prod
+  namespace: argocd
+spec:
+  project: product-a-project
+  source:
+    repoURL: https://github.com/ayush1612/RBAC_demo_manifests.git
+    targetRevision: HEAD
+    path: productA/kustomize
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: produt-a-prod

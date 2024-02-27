@@ -10,8 +10,8 @@ metadata:
 
 data:
   policy.product-a.csv: |
-    p, role:prodAgroup, applications, get, product-a-project/product-a-apps, allow
-    p, role:prodAgroup, applications, sync, product-a-project/product-a-apps, allow
-    p, role:prodAgroup, applications, delete, product-a-project/product-a-apps, deny
+    p, role:prodAdev, applications, get, product-a-project/product-a-apps, allow
+    p, role:prodAdev, applications, sync, product-a-project/product-a-apps, allow
+    p, role:prodAdev, applications, delete, product-a-project/product-a-apps, deny
 
-    g, prodAgroup, role:prodAgroup
+    g, prodAdev, role:prodAdev
