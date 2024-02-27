@@ -10,8 +10,49 @@ metadata:
 
 data:
   policy.product-a.csv: |
-    p, role:prodAdev, applications, get, product-a-project/product-a-apps, allow
-    p, role:prodAdev, applications, sync, product-a-project/product-a-apps, allow
-    p, role:prodAdev, applications, delete, product-a-project/product-a-apps, deny
+    p, role:prodAdev, applications, get, product-a-project/product-a-dev, allow
+    p, role:prodAdev, applications, sync, product-a-project/product-a-dev, allow
+    p, role:prodAdev, applications, delete, product-a-project/product-a-dev, deny
+
+    p, role:prodAdev, applications, get, product-a-project/product-a-qa, allow
+    p, role:prodAdev, applications, sync, product-a-project/product-a-qa, deny
+    p, role:prodAdev, applications, delete, product-a-project/product-a-qa, deny
+
+
+    p, role:prodAdev, applications, get, product-a-project/product-a-prod, allow
+    p, role:prodAdev, applications, sync, product-a-project/product-a-prod, deny
+    p, role:prodAdev, applications, delete, product-a-project/product-a-prod, deny
 
     g, prodAdev, role:prodAdev
+
+
+    p, role:prodAqa, applications, get, product-a-project/product-a-qa, allow
+    p, role:prodAqa, applications, sync, product-a-project/product-a-qa, allow
+    p, role:prodAqa, applications, delete, product-a-project/product-a-qa, deny
+
+    p, role:prodAqa, applications, get, product-a-project/product-a-dev, allow
+    p, role:prodAqa, applications, sync, product-a-project/product-a-dev, deny
+    p, role:prodAqa, applications, delete, product-a-project/product-a-dev, deny
+
+
+    p, role:prodAqa, applications, get, product-a-project/product-a-prod, allow
+    p, role:prodAqa, applications, sync, product-a-project/product-a-prod, deny
+    p, role:prodAqa, applications, delete, product-a-project/product-a-prod, deny
+
+    g, prodAqa, role:prodAqa
+
+
+    p, role:prodAprod, applications, get, product-a-project/product-a-prod, allow
+    p, role:prodAprod, applications, sync, product-a-project/product-a-prod, allow
+    p, role:prodAprod, applications, delete, product-a-project/product-a-prod, deny
+
+    p, role:prodAprod, applications, get, product-a-project/product-a-qa, allow
+    p, role:prodAprod, applications, sync, product-a-project/product-a-qa, deny
+    p, role:prodAprod, applications, delete, product-a-project/product-a-qa, deny
+
+
+    p, role:prodAprod, applications, get, product-a-project/product-a-dev, allow
+    p, role:prodAprod, applications, sync, product-a-project/product-a-dev, deny
+    p, role:prodAprod, applications, delete, product-a-project/product-a-dev, deny
+
+    g, prodAprod, role:prodAprod
