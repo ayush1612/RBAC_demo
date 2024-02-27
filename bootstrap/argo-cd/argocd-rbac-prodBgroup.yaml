@@ -31,7 +31,7 @@ data:
     p, role:prodBqa, applications, delete, product-b-project/product-b-qa, deny
 
     p, role:prodBqa, applications, get, product-b-project/product-b-dev, allow
-    p, role:prodBqa, applications, sync, product-b-project/product-b-dev, deny
+    p, role:prodBqa, applications, sync, product-b-project/product-b-dev, allow
     p, role:prodBqa, applications, delete, product-b-project/product-b-dev, deny
 
     p, role:prodBqa, applications, get, product-b-project/product-b-prod, allow

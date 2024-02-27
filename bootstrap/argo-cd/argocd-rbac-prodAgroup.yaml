@@ -28,7 +28,7 @@ data:
 
 
     p, role:prodAqa, applications, get, product-a-project/product-a-qa, allow
-    p, role:prodAqa, applications, sync, product-a-project/product-a-qa, allow
+    p, role:prodAqa, applications, sync, product-a-project/product-a-qa, deny
     p, role:prodAqa, applications, delete, product-a-project/product-a-qa, deny
 
     p, role:prodAqa, applications, get, product-a-project/product-a-dev, allow
