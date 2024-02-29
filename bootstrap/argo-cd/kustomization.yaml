@@ -8,6 +8,5 @@ resources:
 - argocd-cm.yaml
 namespace: argocd
 patchesStrategicMerge:
-- argocd-rbac-prodAgroup.yaml
-- argocd-rbac-prodBgroup.yaml
-- argocd-rbac-prodCgroup.yaml
+- argocd-rbac-cc.yaml
+- argocd-rbac-ea.yaml
