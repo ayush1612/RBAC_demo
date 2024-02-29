@@ -11,7 +11,7 @@ metadata:
 data:
   policy.product-a.csv: |
     p, role:prodAdev, applications, get, product-a-project/product-a-dev, allow
-    p, role:prodAdev, applications, sync, product-a-project/product-a-dev, allow
+    p, role:prodAdev, applications, sync, product-a-project/product-a-dev, deny
     p, role:prodAdev, applications, delete, product-a-project/product-a-dev, deny
 
     p, role:prodAdev, applications, get, product-a-project/product-a-qa, allow
