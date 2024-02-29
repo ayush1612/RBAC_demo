@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    app.kubernetes.io/name: argocd-rbac-cm
+    app.kubernetes.io/part-of: argocd
+  name: argocd-rbac-cm
+  namespace: argocd
+
+
+data:
+  policy.cc.csv: |
+    p, role:CC-SEP-Admin, applications, get, cc-project/cc-apps, allow
+    p, role:CC-SEP-Admin, applications, sync, cc-project/cc-apps, allow
+    p, role:CC-SEP-Admin, applications, delete, cc-project/cc-apps, allow
+
+    g, CC-SEP-Admin, role:CC-SEP-Admin
+
+
+    p, role:CC-SEP-Operator, applications, get, cc-project/cc-apps, allow
+    p, role:CC-SEP-Operator, applications, sync, cc-project/cc-apps, allow
+    p, role:CC-SEP-Operator, applications, delete, cc-project/cc-apps, deny
+
+
+    g, CC-SEP-Operator, role:CC-SEP-Operator
+
+
+
+    p, role:CC-SEP-ReadOnly, applications, get, cc-project/cc-apps, allow
+    p, role:CC-SEP-ReadOnly, applications, sync, cc-project/cc-apps, deny
+    p, role:CC-SEP-ReadOnly, applications, delete, cc-project/cc-apps, deny
+
+    g, CC-SEP-ReadOnly, role:CC-SEP-ReadOnly

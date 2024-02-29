@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    app.kubernetes.io/name: argocd-rbac-cm
+    app.kubernetes.io/part-of: argocd
+  name: argocd-rbac-cm
+  namespace: argocd
+
+data:
+  policy.product-b.csv: |
+    p, role:EA-SEP-Admin, applications, get, ea-project/ea-apps, allow
+    p, role:EA-SEP-Admin, applications, sync, ea-project/ea-apps, allow
+    p, role:EA-SEP-Admin, applications, delete, ea-project/ea-apps, allow
+
+    g, EA-SEP-Admin, role:EA-SEP-Admin
+
+
+    p, role:EA-SEP-Operator, applications, get, ea-project/ea-apps, allow
+    p, role:EA-SEP-Operator, applications, sync, ea-project/ea-apps, allow
+    p, role:EA-SEP-Operator, applications, delete, ea-project/ea-apps, deny
+
+
+    g, EA-SEP-Operator, role:EA-SEP-Operator
+
+
+
+    p, role:EA-SEP-ReadOnly, applications, get, ea-project/ea-apps, allow
+    p, role:EA-SEP-ReadOnly, applications, sync, ea-project/ea-apps, deny
+    p, role:EA-SEP-ReadOnly, applications, delete, ea-project/ea-apps, deny
+
+    g, EA-SEP-ReadOnly, role:EA-SEP-ReadOnly
