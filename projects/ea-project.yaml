@@ -1,0 +1,35 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: ea-project
+  namespace: argocd
+  # Finalizer that ensures that project is not deleted until it is not referenced by any application
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  description: Team Project to demonstrate RBAC
+  # Allow manifests to deploy from any Git repos
+  sourceRepos:
+  - 'https://github.com/ayush1612/RBAC_demo_manifests'
+  - 'https://github.com/ayush1612/RBAC_demo'
+  # Only permit applications to deploy to the guestbook namespace in the same cluster
+  destinations:
+  - namespace: product-b-dev
+    server: https://kubernetes.default.svc
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ea-apps
+  namespace: argocd
+spec:
+  project: ea-project
+  source:
+    repoURL: https://github.com/ayush1612/RBAC_demo_manifests.git
+    targetRevision: HEAD
+    path: ea/kustomize
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: product-b-dev
+
