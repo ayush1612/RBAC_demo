@@ -18,7 +18,7 @@ data:
 
     p, role:EA-SEP-Operator, applications, get, ea-project/ea-apps, allow
     p, role:EA-SEP-Operator, applications, sync, ea-project/ea-apps, allow
-    p, role:EA-SEP-Operator, applications, delete, ea-project/ea-apps, allow
+    p, role:EA-SEP-Operator, applications, delete, ea-project/ea-apps, deny
 
 
     g, EA-SEP-Operator, role:EA-SEP-Operator
