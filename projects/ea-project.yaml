@@ -14,7 +14,7 @@ spec:
   - 'https://github.com/ayush1612/RBAC_demo'
   # Only permit applications to deploy to the guestbook namespace in the same cluster
   destinations:
-  - namespace: product-b-dev
+  - namespace: ea
     server: https://kubernetes.default.svc
 
 ---
@@ -31,5 +31,5 @@ spec:
     path: ea/kustomize
   destination:
     server: https://kubernetes.default.svc
-    namespace: product-b-dev
+    namespace: ea
 
