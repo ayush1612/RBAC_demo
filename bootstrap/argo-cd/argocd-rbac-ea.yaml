@@ -8,7 +8,7 @@ metadata:
   namespace: argocd
 
 data:
-  policy.product-b.csv: |
+  policy.ea.csv: |
     p, role:EA-SEP-Admin, applications, get, ea-project/ea-apps, allow
     p, role:EA-SEP-Admin, applications, sync, ea-project/ea-apps, allow
     p, role:EA-SEP-Admin, applications, delete, ea-project/ea-apps, allow
