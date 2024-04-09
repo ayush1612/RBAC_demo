@@ -14,13 +14,13 @@ spec:
       repoURL: https://github.com/ayush1612/RBAC_demo.git
       requeueAfterSeconds: 20
       revision: ""
-      template:
-        metadata: {}
-        spec:
-          destination: {}
-          project: ""
-          source:
-            repoURL: ""
+      # template:
+      #   metadata: {}
+      #   spec:
+      #     destination: {}
+      #     project: ""
+      #     source:
+      #       repoURL: ""
   syncPolicy:
     preserveResourcesOnDeletion: true
   template:
