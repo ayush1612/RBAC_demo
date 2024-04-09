@@ -11,7 +11,7 @@ metadata:
 data:
   policy.cc.csv: |
     p, role:CC-SEP-Admin, applications, get, cc-project/cc-apps, allow
-    p, role:CC-SEP-Admin, applications, sync, cc-project/cc-apps, deny
+    p, role:CC-SEP-Admin, applications, sync, cc-project/cc-apps, allow
     p, role:CC-SEP-Admin, applications, delete, cc-project/cc-apps, allow
 
     g, CC-SEP-Admin, role:CC-SEP-Admin
