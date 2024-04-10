@@ -18,7 +18,7 @@ data:
 
 
     p, role:CC-SEP-Operator, applications, get, cc-project/cc-apps, allow
-    p, role:CC-SEP-Operator, applications, sync, cc-project/cc-apps, allow
+    p, role:CC-SEP-Operator, applications, sync, cc-project/cc-apps, deny
     p, role:CC-SEP-Operator, applications, delete, cc-project/cc-apps, deny
 
 
